@@ -8,7 +8,7 @@ package Entidades;
         int salud;
         private int reproduccion;
 
-        public Organismos(int posicionX, int posicionY, int edad, int salud, int energia) {
+        public Organismos(int posicionX, int posicionY, int edad, int salud, String energia) {
             this.posicionX = posicionX;
             this.posicionY = posicionY;
             this.edad = edad;
@@ -68,7 +68,18 @@ package Entidades;
         public void setReproduccion(int reproduccion) {
             this.reproduccion = reproduccion;
         }
-
-
+        @Override
+        public String toString() {
+            return "Organismo{" +
+                    "posicionX=" + posicionX +
+                    ", posicionY=" + posicionY +
+                    ", edad=" + edad +
+                    ", salud=" + salud +
+                    ", reproduccion=" + reproduccion +
+                    '}';
+        }
+        public void String (String organismo) {
+            System.out.println(organismo);
+        }
     }
 

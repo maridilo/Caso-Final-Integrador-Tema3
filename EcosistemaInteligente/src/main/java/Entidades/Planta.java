@@ -2,7 +2,7 @@ package Entidades;
 
 public class Planta extends Organismos {
 private String tipoplanta;
-    public Planta(int posicionX, int posicionY, int edad, int salud, int reproduccion) {
+    public Planta(int posicionX, int posicionY, int edad, int salud, int i, String reproduccion) {
         super(posicionX, posicionY, edad, salud, reproduccion);
         this.tipoplanta = tipoplanta;
     }

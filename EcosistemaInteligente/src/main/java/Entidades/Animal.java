@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Animal extends Organismos{
     private String tipoAnimal;
     private Ambiente ambiente;
-    public Animal(int posicionX, int posicionY, int edad, int salud, int energia) {
-        super(posicionX, posicionY, edad, salud, energia);
-        this.tipoAnimal = tipoAnimal;
+    public Animal(int posicionX, int posicionY, int edad, int salud, int energia, String tipoAnimal) {
+        super(posicionX, posicionY, edad, salud, String.valueOf(energia));
+        this.tipoAnimal = this.tipoAnimal;
     }
     @Override
     public void mover(int nuevaposicionX, int nuevaposicionY) {
