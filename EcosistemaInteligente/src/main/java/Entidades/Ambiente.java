@@ -64,5 +64,13 @@ import java.util.ArrayList;
             }
             return plantasCercanas;
         }
+
+        public ArrayList<Organismos> getOrganismos() {
+            return organismos;
+        }
+
+        public void setOrganismos(ArrayList<Organismos> organismos) {
+            this.organismos = organismos;
+        }
     }
 

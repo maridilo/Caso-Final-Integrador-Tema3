@@ -68,5 +68,7 @@ package Entidades;
         public void setReproduccion(int reproduccion) {
             this.reproduccion = reproduccion;
         }
+
+
     }
 

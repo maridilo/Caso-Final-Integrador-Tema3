@@ -1,5 +1,7 @@
 package Entidades;
 
+import java.util.ArrayList;
+
 public class Animal extends Organismos{
     private String tipoAnimal;
     private Ambiente ambiente;
@@ -42,4 +44,17 @@ private int obtenerComidaDisponible() {
         }
         return cantidadComida;
 }
+
+    public void cazar(ArrayList<Organismos> presasCercanas) {
+        // Simulación de la caza
+        if (this.tipoAnimal == "Carnivoro") {
+            // Verificamos si el animal es carnívoro
+            if (presasCercanas.size() > 0) {
+                // El animal caza a una presa
+                Organismos presa = presasCercanas.get(0); // Supongamos que el animal caza a la primera presa que encuentra
+                presa.enfermarse(0); // La presa muere
+                this.salud += 10; // Aumentamos la salud del animal con la cantidad de comida ingerida
+            }
+        }
+    }
 }
