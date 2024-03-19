@@ -7,13 +7,15 @@ package Entidades;
         private int edad;
         int salud;
         private int reproduccion;
+        private int crecimiento;
 
         public Organismos(int posicionX, int posicionY, int edad, int salud, String energia) {
             this.posicionX = posicionX;
             this.posicionY = posicionY;
             this.edad = edad;
             this.salud = salud;
-            this.reproduccion = reproduccion;}
+            this.reproduccion = reproduccion;
+            this.crecimiento = crecimiento;}
 
         public void mover (int posicionX, int posicionY){
             this.posicionX = posicionX;
@@ -27,6 +29,9 @@ package Entidades;
         }
         public void enfermarse (int salud){
             this.salud = salud;
+        }
+        public void crecer (int crecimiento){
+            this.crecimiento = crecimiento;
         }
 
         public int getPosicionX() {
