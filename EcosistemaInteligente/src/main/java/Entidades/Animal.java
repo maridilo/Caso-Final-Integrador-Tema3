@@ -57,4 +57,27 @@ private int obtenerComidaDisponible() {
             }
         }
     }
+    public void setAmbiente(Ambiente ambiente) {
+        this.ambiente = ambiente;
+    }
+    public Ambiente getAmbiente() {
+        return ambiente;
+    }
+    public void reproducirse(){
+          // Simulacion de la reproduccion
+          if (this.salud > 0) {
+                // Verificamos que el animal esté vivo
+                int parejaDisponible = obtenerParejaDisponible(); // Supongamos que esta función devuelve la cantidad de parejas disponibles
+                if (parejaDisponible > 0) {
+                 // El animal se reproduce
+                 int cantidadHijos = parejaDisponible / 2; // Fórmula simplificada
+                 this.salud -= cantidadHijos; // Disminuimos la salud del animal por el costo de la reproducción
+                }
+          }
+    }
+    private int obtenerParejaDisponible() {
+        // Supongamos que esta función devuelve la cantidad de parejas disponibles
+        int cantidadParejas = ambiente.obtenerOrganismosCercanos(this).size();
+        return cantidadParejas;
+    }
 }

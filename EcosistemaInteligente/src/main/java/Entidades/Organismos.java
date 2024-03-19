@@ -86,5 +86,8 @@ package Entidades;
         public void String (String organismo) {
             System.out.println(organismo);
         }
+
+        public Object getEspecie() {
+        }
     }
 

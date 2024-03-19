@@ -72,5 +72,18 @@ import java.util.ArrayList;
         public void setOrganismos(ArrayList<Organismos> organismos) {
             this.organismos = organismos;
         }
+        public ArrayList<Organismos> obtenerOrganismosCercanos(Animal animal) {
+            ArrayList<Organismos> organismosCercanos = new ArrayList<>();
+            for (Organismos organismo : organismos) {
+                // Verificar que el organismo esté dentro de un rango de posiciones
+                if (Math.abs(animal.getPosicionX() - organismo.getPosicionX()) <= 10 &&
+                        Math.abs(animal.getPosicionY() - organismo.getPosicionY()) <= 10) {
+                    organismosCercanos.add(organismo);
+                }
+            }
+            return organismosCercanos;
+        }
     }
+
+
 
